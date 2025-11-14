@@ -150,13 +150,13 @@
 <section class="about">
   <h2>About Munas Store</h2>
   <p>
-    Munas Store is a small e-commerce brand based in Plochingen, Germany.
-    We are starting with a premium stainless steel bottle but plan to expand into
-    useful home and sports products.
+    Munas Store is a growing e-commerce brand focused on offering high-quality,
+    durable products for everyday use, home, and sports. We start with our
+    stainless-steel bottle, and more practical items are already in development.
   </p>
   <p>
-    Our mission is to offer quality items that are durable, practical, and delivered
-    fast and reliably through Amazon FBA.
+    Our mission is to deliver long-lasting, functional products with reliable and
+    fast fulfillment through Amazon FBA.
   </p>
 </section>
 
@@ -176,9 +176,13 @@
     <a href="/en/terms.html">Terms</a> ·
     <a href="/en/cancellation.html">Cancellation</a> ·
     <a href="/en/shipping.html">Shipping</a>
-    <div style="margin-top:8px; color:#76839b;">© 2025 Munas E-Commerce</div>
+    <div style="margin-top:8px; color:#76839b;">© <span id="y"></span> Munas E-Commerce</div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
