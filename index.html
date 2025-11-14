@@ -34,79 +34,76 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 16px;
+      gap: 12px;
     }
 
-    .brand a {
-      color: var(--text);
-      text-decoration:none;
+    .brand {
       font-weight:700;
       letter-spacing:.3px;
+      font-size: 18px;
     }
 
-    .brand a:hover {
-      color: var(--accent);
-    }
-
-    /* --- Dropdown menu styles --- */
+    /* --- NAV + DROPDOWN --- */
     .top-nav {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      gap: 16px;
+      gap: 12px;
+    }
+
+    .logo {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .logo:hover {
+      color: var(--text);
     }
 
     .nav-menu {
       position: relative;
-      display: inline-block;
     }
 
     .nav-menu-button {
-      background: #111827;
-      border: 1px solid var(--muted);
-      color: var(--text);
-      padding: 8px 14px;
+      background: transparent;
+      border: 1px solid #1f2937;
       border-radius: 999px;
+      color: #e5edf9;
+      padding: 8px 14px;
+      font-size: 14px;
       cursor: pointer;
-      font: inherit;
-    }
-
-    .nav-menu-button:hover {
-      border-color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .nav-menu-dropdown {
       position: absolute;
-      right: 0;
-      top: calc(100% + 8px);
-      background: #020617;
-      border: 1px solid #272a3a;
-      border-radius: 12px;
-      padding: 8px 0;
+      top: 110%;
+      left: 0;
       min-width: 220px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-      display: none;
+      background: #020617;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 14px 30px rgba(0,0,0,.6);
+      padding: 8px 0;
+      display: none; /* hidden by default */
       z-index: 20;
     }
 
     .nav-menu-dropdown a {
       display: block;
       padding: 8px 16px;
-      font-size: 14px;
-      color: var(--text);
+      color: #e5edf9;
       text-decoration: none;
-      margin: 0;
+      font-size: 14px;
     }
 
     .nav-menu-dropdown a:hover {
-      background: rgba(255, 255, 255, 0.04);
+      background: #111827;
     }
 
-    /* Show dropdown when .open is on the container */
-    .nav-menu.open .nav-menu-dropdown {
-      display: block;
-    }
-
+    /* HERO */
     .hero {
       max-width: 980px;
       margin: 24px auto;
@@ -185,26 +182,30 @@
       justify-content:center;
     }
 
-    .mock small { color:#93a4c6; }
+    .mock img {
+      max-width: 320px;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+    }
 
-    /* Optional gallery for more bottle images */
+    /* GALLERY – only orange + blue */
     .gallery {
       max-width: 980px;
-      margin: 0 auto 32px;
-      padding: 0 20px;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:16px;
+      margin: 16px auto 0;
+      padding: 0 32px 24px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .gallery img {
-      width:120px;
-      max-width:30%;
-      border-radius:12px;
-      border:1px solid #202637;
-      background:#020617;
-      object-fit:cover;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      background: #020617;
+      border: 1px solid #1f2937;
     }
 
     .grid {
@@ -234,6 +235,10 @@
         grid-template-columns: 1fr;
         padding:24px;
       }
+      .gallery {
+        padding: 0 20px 24px;
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 640px) {
@@ -241,20 +246,18 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .top-nav {
-        width: 100%;
-        justify-content: flex-start;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <a href="index.html">Munas Store</a>
-    </div>
+    <div class="brand">Munas Store</div>
 
     <nav class="top-nav">
+      <!-- Home link -->
+      <a href="index.html" class="logo">Startseite</a>
+
+      <!-- Dropdown menu -->
       <div class="nav-menu">
         <button class="nav-menu-button" type="button">
           Munas Store ▾
@@ -279,7 +282,7 @@
         Versand &amp; Rückgabe über Amazon FBA.
       </p>
 
-      <!-- Wenn dein Amazon Listing live ist, href & class anpassen -->
+      <!-- Wenn dein Amazon-Link live ist, class="btn ready" + href anpassen -->
       <a class="btn" href="#" aria-disabled="true" title="Amazon-Link folgt bald">
         BUY ON AMAZON · coming soon
       </a>
@@ -292,23 +295,21 @@
       </div>
     </div>
 
-    <!-- Hauptprodukt-Bild -->
-    <div class="mock" style="text-align:center;">
+    <!-- Hauptbild Mango -->
+    <div class="mock">
       <img
         src="images/mango.png"
         alt="Munas Edelstahl Trinkflasche – Farbe Mango (Gelb), 500 ml"
-        style="max-width: 320px; width:100%; height:auto; border-radius:12px;"
         loading="lazy"
       >
     </div>
   </section>
 
-  <!-- Optional: zusätzliche Produktbilder -->
-<section class="gallery">
-  <img src="images/bottle-orange.png" alt="Trinkflasche – Orange" class="gallery-img">
-  <img src="images/bottle-blue.png" alt="Trinkflasche – Blau" class="gallery-img">
-</section>
-  
+  <!-- Zusätzliche Produktbilder: Orange & Blau -->
+  <section class="gallery">
+    <img src="images/bottle-orange.png" alt="Trinkflasche in Orange" loading="lazy">
+    <img src="images/bottle-blue.png" alt="Trinkflasche in Blau" loading="lazy">
+  </section>
 
   <section class="grid legal">
     <p>Fragen? <a href="mailto:info@munas-store.com">info@munas-store.com</a></p>
@@ -316,7 +317,7 @@
   </section>
 
   <p style="text-align:center; margin-top:20px;">
-    <strong>DE</strong> | <a href="/en/">EN</a>
+    <strong>DE</strong> | <a href="en/">EN</a>
   </p>
 
   <footer>
@@ -333,23 +334,22 @@
   </footer>
 
   <script>
-    // Copyright-Jahr setzen
+    // Jahr im Footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Dropdown-Menü steuern
-    const navMenu = document.querySelector('.nav-menu');
-    const navButton = document.querySelector('.nav-menu-button');
+    // Dropdown-Logik
+    const btn = document.querySelector('.nav-menu-button');
+    const menu = document.querySelector('.nav-menu-dropdown');
 
-    if (navMenu && navButton) {
-      navButton.addEventListener('click', function (e) {
-        e.stopPropagation();
-        navMenu.classList.toggle('open');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const isOpen = menu.style.display === 'block';
+        menu.style.display = isOpen ? 'none' : 'block';
       });
 
-      // schließen, wenn man außerhalb klickt
-      document.addEventListener('click', function (e) {
-        if (!navMenu.contains(e.target)) {
-          navMenu.classList.remove('open');
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+          menu.style.display = 'none';
         }
       });
     }
