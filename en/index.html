@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Munas Store – BPA-free Stainless Steel Water Bottle</title>
   <meta name="description" content="Durable, BPA-free stainless steel water bottle. Leak-proof, long-lasting and taste-neutral – perfect for everyday use, sports and travel. Shipping & returns via Amazon FBA." />
-  <link rel="canonical" href="https://munas-store.com/en.html" />
-
+  <link rel="canonical" href="https://munas-store.com/en/" />
   <style>
     :root {
       --bg:#0b0d12;
@@ -16,238 +15,214 @@
       --accent:#4ea8ff;
       --accent2:#6ee7b7;
     }
-
-    * { box-sizing: border-box; }
-
+    * { box-sizing:border-box; }
     body {
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
     }
 
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+    .wrap { max-width:980px; margin:0 auto; padding:0 20px; }
 
-    .site-header, .site-footer {
-      border-bottom: 1px solid #202637;
+    header {
+      border-bottom:1px solid #202637;
+      background:#05060a;
     }
-
-    .site-footer {
-      border-bottom: 0;
-      border-top: 1px solid #202637;
-      margin-top: 32px;
-    }
-
-    .site-header .wrap,
-    .site-footer .wrap {
+    .header-inner {
+      max-width:980px;
+      margin:0 auto;
+      padding:16px 20px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 12px;
     }
-
     .brand {
-      font-weight: 700;
-      letter-spacing: .3px;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 18px;
+      font-weight:700;
+      letter-spacing:.3px;
+      color:var(--text);
+      text-decoration:none;
+      font-size:1.1rem;
     }
-
-    .brand span {
-      font-weight: 400;
+    .brand span { opacity:.8; }
+    nav a {
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:16px;
+      font-size:.95rem;
     }
+    nav a:hover { color:var(--text); }
 
-    .nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 16px;
-      font-size: 14px;
+    .hero {
+      max-width:980px;
+      margin:24px auto 40px;
+      padding:32px;
+      background:linear-gradient(180deg,#111827,#0f172a);
+      border-radius:16px;
+      border:1px solid #202637;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:28px;
     }
-
-    .nav a:hover {
-      color: var(--text);
-    }
-
-    main.wrap {
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
-
     .tag {
       display:inline-block;
       padding:6px 10px;
-      border:1px solid #2a3446;
       border-radius:999px;
+      border:1px solid #2a3446;
       font-size:12px;
       color:#b7c1d6;
       margin-bottom:10px;
     }
-
     h1 {
       margin:0 0 10px;
-      font-size: clamp(28px, 4.5vw, 40px);
+      font-size:clamp(28px,4.5vw,40px);
     }
-
     .lead {
-      color: var(--muted);
       margin:0 0 18px;
-      line-height:1.55;
+      color:var(--muted);
+      line-height:1.6;
     }
 
     .btn {
       display:inline-block;
       padding:14px 18px;
       border-radius:10px;
+      background:#2b3345;
+      color:#9aa7bf;
       text-decoration:none;
       font-weight:600;
       border:1px solid #3a4359;
-    }
-
-    .btn-disabled {
-      background:#2b3345;
-      color:#9aa7bf;
       cursor:not-allowed;
+      font-size:.95rem;
     }
-
     .features {
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:12px;
       margin-top:18px;
-      margin-bottom:24px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
     }
-
     .chip {
       background:#111827;
       border:1px solid #273043;
       padding:10px 12px;
       border-radius:10px;
       color:#c9d4e6;
-      font-size:14px;
+      font-size:.9rem;
     }
 
     .mock {
-      margin-top: 8px;
-      margin-bottom: 24px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background: radial-gradient(120% 140% at 80% 20%, #1f2937 20%, #0b0f1a 70%);
-      border:1px solid #222a3a;
+      aspect-ratio:1/1;
+      background:radial-gradient(120% 140% at 80% 20%,#1f2937 20%,#0b0f1a 70%);
       border-radius:14px;
-      padding:24px;
+      border:1px solid #222a3a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
     }
-
     .mock img {
-      max-width: 320px;
+      max-width:320px;
       width:100%;
       height:auto;
       border-radius:12px;
+      display:block;
     }
 
     .legal {
+      max-width:980px;
+      margin:0 auto 40px;
+      padding:0 20px;
       text-align:center;
-      margin:36px 0 24px;
-      color: var(--muted);
+      color:var(--muted);
+      line-height:1.7;
     }
-
+    .legal a { color:var(--accent); text-decoration:none; }
+    .legal a:hover { text-decoration:underline; }
     .lang {
       text-align:center;
-      color: var(--muted);
+      margin-bottom:40px;
+      color:var(--muted);
     }
-
     .lang a {
-      color: var(--accent);
+      color:var(--accent);
       text-decoration:none;
     }
 
-    .lang a:hover {
-      text-decoration:underline;
+    footer {
+      border-top:1px solid #202637;
+      background:#05060a;
+      margin-top:20px;
     }
-
-    .site-footer a {
-      color: var(--muted);
+    .footer-inner {
+      max-width:980px;
+      margin:0 auto;
+      padding:16px 20px 24px;
+      text-align:center;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    footer a {
+      color:var(--muted);
       text-decoration:none;
-      margin-right:10px;
+      margin:0 6px;
+      font-size:.9rem;
     }
+    footer a:hover { color:var(--text); }
 
-    .site-footer a:hover {
-      color: var(--text);
-    }
-
-    .copy {
-      color:#76839b;
-      font-size: 13px;
-    }
-
-    @media (max-width: 820px) {
-      .site-header .wrap,
-      .site-footer .wrap {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        display:flex;
-        flex-wrap:wrap;
-        gap:8px 12px;
-        margin-top:8px;
-      }
-
-      .nav a {
-        margin-left:0;
-      }
+    @media (max-width:820px){
+      .hero { grid-template-columns:1fr; padding:24px; }
+      nav { display:none; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/en.html">Munas <span>Store</span></a>
-      <nav class="nav">
-        <a href="/agb.html">Terms &amp; Conditions</a>
-        <a href="/widerruf.html">Cancellation</a>
-        <a href="/versand.html">Shipping &amp; Returns</a>
-        <a href="/impressum.html">Imprint</a>
-        <a href="/datenschutz.html">Privacy</a>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="/en/">
+        Munas <span>Store</span>
+      </a>
+      <nav>
+        <a href="/en/terms.html">Terms &amp; Conditions</a>
+        <a href="/en/cancellation.html">Cancellation</a>
+        <a href="/en/shipping.html">Shipping &amp; Returns</a>
+        <a href="/en/imprint.html">Imprint</a>
+        <a href="/en/privacy.html">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <p class="tag">New · Stainless Steel Water Bottle</p>
-    <h1>Durable, BPA-free stainless steel water bottle</h1>
-    <p class="lead">
-      Leak-proof, long-lasting and taste-neutral – perfect for everyday use, sports and travel.
-      Shipping &amp; returns via Amazon FBA.
-    </p>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="tag">New · Stainless Steel Water Bottle</p>
+        <h1>Durable, BPA-free stainless steel water bottle</h1>
+        <p class="lead">
+          Leak-proof, long-lasting and taste-neutral – perfect for everyday use, sports and travel.
+          Shipping &amp; returns via Amazon FBA.
+        </p>
 
-    <p>
-      <a class="btn btn-disabled" href="#" aria-disabled="true" title="Listing coming soon">
-        BUY ON AMAZON · coming soon
-      </a>
-    </p>
+        <p>
+          <a class="btn" href="#" aria-disabled="true" title="Amazon listing coming soon">
+            BUY ON AMAZON · coming soon
+          </a>
+        </p>
 
-    <div class="features">
-      <span class="chip">✅ BPA-free</span>
-      <span class="chip">💧 Leak-proof</span>
-      <span class="chip">🧽 Easy to clean</span>
-      <span class="chip">🌱 Reusable &amp; sustainable</span>
-    </div>
+        <div class="features">
+          <span class="chip">✅ BPA-free</span>
+          <span class="chip">💧 Leak-proof</span>
+          <span class="chip">🧽 Easy to clean</span>
+          <span class="chip">🌱 Reusable &amp; sustainable</span>
+        </div>
+      </div>
 
-    <!-- Main product image (Mango / Orange) -->
-    <div class="mock">
-      <img
-        src="../images/mango.png"
-        alt="Munas stainless steel bottle – Mango / Orange, 500 ml"
-        loading="lazy"
-      />
-    </div>
+      <div class="mock">
+        <img
+          src="../images/mango.png"
+          alt="Munas stainless steel water bottle – Mango color (yellow), 500 ml"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
     <section class="legal">
       <p>Questions? <a href="mailto:info@munas-store.com">info@munas-store.com</a></p>
@@ -259,16 +234,14 @@
     </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div>
-        <a href="/impressum.html">Imprint</a> ·
-        <a href="/datenschutz.html">Privacy</a> ·
-        <a href="/agb.html">Terms &amp; Conditions</a> ·
-        <a href="/widerruf.html">Cancellation</a> ·
-        <a href="/versand.html">Shipping &amp; Returns</a>
-      </div>
-      <div class="copy">© <span id="y"></span> Munas E-Commerce</div>
+  <footer>
+    <div class="footer-inner">
+      <a href="/en/imprint.html">Imprint</a> ·
+      <a href="/en/privacy.html">Privacy</a> ·
+      <a href="/en/terms.html">Terms &amp; Conditions</a> ·
+      <a href="/en/cancellation.html">Cancellation</a> ·
+      <a href="/en/shipping.html">Shipping &amp; Returns</a>
+      <div style="margin-top:8px;">© <span id="y"></span> Munas E-Commerce</div>
     </div>
   </footer>
 
