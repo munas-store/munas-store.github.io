@@ -4,431 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Munas Store – Edelstahl Trinkflasche</title>
-  <meta name="description" content="Robuste, BPA-freie Edelstahl Trinkflasche. Auslaufsicher, langlebig und geschmacksneutral – perfekt für Alltag, Sport und Reisen. Versand & Rückgabe über Amazon FBA." />
 
   <style>
     :root {
-      --bg: #050711;
-      --card: #111827;
-      --card-soft: #0b1120;
-      --text: #e9eef6;
-      --muted: #9ca3af;
-      --accent: #4ea8ff;
-      --accent2: #6ee7b7;
-      --border: #1f2937;
+      --bg:#050711;
+      --text:#e9eef6;
+      --muted:#9ca3af;
+      --accent:#4ea8ff;
+      --accent2:#6ee7b7;
     }
 
     * { box-sizing: border-box; }
 
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
+      margin:0;
+      font-family:system-ui, Arial;
+      background: radial-gradient(circle at top, #111827, #020617 60%, #000);
+      color:var(--text);
     }
-
-    a { color: inherit; }
 
     .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 16px 20px 40px;
+      max-width:980px;
+      margin:auto;
+      padding:20px;
     }
-
-    /* HEADER */
 
     header {
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), transparent);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-
-    .site-header-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 12px 20px 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      border-bottom:1px solid #1f2937;
+      text-align:center;
+      padding:15px 0;
     }
 
     .brand {
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      font-size: 18px;
+      font-weight:700;
+      font-size:18px;
     }
 
-    .brand span {
-      font-weight: 400;
-      opacity: 0.9;
+    nav {
+      margin-top:10px;
     }
 
-    .nav {
-      margin-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      width: 100%;
-      justify-content: center; /* centered top menu */
-      font-size: 14px;
-      color: var(--muted);
+    nav a {
+      margin:0 10px;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
     }
 
-    .nav a {
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      opacity: 0;
-      transform: scaleX(0.5);
-      transform-origin: center;
-      transition: opacity 0.18s ease, transform 0.18s ease;
-    }
-
-    .nav a:hover::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
-
-    /* HERO CARD */
+    nav a:hover { color:white; }
 
     .hero {
-      margin-top: 32px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 32px;
-      padding: 32px 28px;
-      border-radius: 22px;
-      background:
-        radial-gradient(circle at top left, rgba(79, 70, 229, 0.18), transparent 60%),
-        radial-gradient(circle at top right, rgba(45, 212, 191, 0.16), transparent 55%),
-        linear-gradient(145deg, #020617, #020617 38%, #020617 40%, #0b1120 100%);
-      border: 1px solid rgba(30, 64, 175, 0.55);
-      box-shadow:
-        0 24px 60px rgba(15, 23, 42, 0.95),
-        0 0 0 1px rgba(15, 23, 42, 0.9);
+      margin-top:30px;
     }
 
-    .h-text h1 {
-      margin: 12px 0 10px;
-      font-size: clamp(28px, 4vw, 36px);
+    h1 {
+      font-size:32px;
+      margin-bottom:10px;
     }
 
-    .h-text p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      font-size: 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #cbd5f5;
-      background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.25), rgba(15, 23, 42, 0.7));
-    }
-
-    .tag::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    p {
+      color:var(--muted);
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: #020617;
-      color: #9ca3af;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-      cursor: not-allowed;
-      margin-top: 4px;
-    }
-
-    .btn span {
-      opacity: 0.7;
+      display:inline-block;
+      margin-top:15px;
+      padding:14px 20px;
+      border-radius:30px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:black;
+      font-weight:600;
+      text-decoration:none;
     }
 
     .features {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 18px;
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
     }
 
     .chip {
-      font-size: 13px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(30, 64, 175, 0.65);
-      color: #e5e7eb;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      background:#111827;
+      padding:10px;
+      border-radius:10px;
+      text-align:center;
     }
 
-    .hero-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .images {
+      margin-top:25px;
+      display:grid;
+      gap:10px;
     }
 
-    .hero-img-inner {
-      border-radius: 18px;
-      padding: 20px 16px;
-      background:
-        radial-gradient(circle at top, rgba(251, 191, 36, 0.16), transparent 60%),
-        linear-gradient(180deg, #020617, #020617 35%, #020617 40%, #020617 100%);
-      border: 1px solid rgba(30, 64, 175, 0.6);
-      box-shadow:
-        0 22px 45px rgba(15, 23, 42, 0.95),
-        0 0 0 1px rgba(15, 23, 42, 0.9);
-      max-width: 360px;
-      width: 100%;
+    .images img {
+      width:100%;
+      border-radius:12px;
     }
-
-    .hero-img img {
-      display: block;
-      max-width: 320px;
-      width: 100%;
-      height: auto;
-      border-radius: 14px;
-      filter: drop-shadow(0 20px 30px rgba(15, 23, 42, 0.95));
-    }
-
-    /* ABOUT */
 
     .about {
-      margin-top: 40px;
-      padding: 26px 24px 24px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.97));
-      border: 1px solid rgba(30, 64, 175, 0.6);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.9);
+      margin-top:40px;
     }
-
-    .about h2 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .about p {
-      margin: 4px 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 14px;
-    }
-
-    .about strong {
-      color: #e5e7eb;
-    }
-
-    /* LEGAL NOTE + LANGUAGE SWITCH */
-
-    .legal {
-      margin-top: 28px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .legal a {
-      color: #c4d0ff;
-      text-decoration: none;
-    }
-
-    .legal a:hover {
-      text-decoration: underline;
-    }
-
-    .lang-switch {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .lang-switch a {
-      color: #9ca3af;
-      text-decoration: none;
-    }
-
-    .lang-switch strong {
-      color: #e5e7eb;
-    }
-
-    /* FOOTER */
 
     footer {
-      border-top: 1px solid rgba(30, 64, 175, 0.6);
-      margin-top: 32px;
-      padding: 14px 20px 26px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      text-align: center;
+      margin-top:40px;
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      border-top:1px solid #1f2937;
+      padding-top:15px;
     }
 
     footer a {
-      text-decoration: none;
-      color: #9ca3af;
-      margin: 0 8px;
+      color:var(--muted);
+      text-decoration:none;
+      margin:0 8px;
     }
 
-    footer a:hover {
-      color: #e5e7eb;
-    }
+    footer a:hover { color:white; }
 
-    .copy {
-      margin-top: 6px;
-      color: #6b7280;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 860px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 24px 18px;
-      }
-
-      .hero-img {
-        order: -1; /* Bild oben auf kleinen Screens */
-      }
-
-      .hero-img-inner {
-        max-width: 320px;
-        margin: 0 auto;
-      }
-
-      .hero-img img {
-        max-width: 260px;
-      }
-
-      .features {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .about {
-        padding: 20px 18px 18px;
-      }
-    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="site-header-inner">
-      <div class="brand">Munas <span>Store</span></div>
-      <nav class="nav">
-        <a href="/agb.html">AGB</a>
-        <a href="/widerruf.html">Widerruf</a>
-        <a href="/versand.html">Versand &amp; Rückgabe</a>
-        <a href="/impressum.html">Impressum</a>
-        <a href="/datenschutz.html">Datenschutz</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="h-text">
-        <span class="tag">Neu · Edelstahl Trinkflasche</span>
-        <h1>Robuste, BPA-freie Trinkflasche aus Edelstahl</h1>
-        <p>
-          Auslaufsicher, langlebig und geschmacksneutral – perfekt für Alltag, Sport und Reisen.
-          Versand &amp; Rückgabe über Amazon FBA.
-        </p>
+<header>
+  <div class="brand">Munas Store</div>
+  <nav>
+    <a href="/agb.html">AGB</a>
+    <a href="/widerruf.html">Widerruf</a>
+    <a href="/versand.html">Versand</a>
+    <a href="/impressum.html">Impressum</a>
+    <a href="/datenschutz.html">Datenschutz</a>
+  </nav>
+</header>
 
-        <a class="btn" href="https://www.amazon.de/gp/product/B0FXS98DTS/ref=cx_skuctr_share?smid=A2FQ94VFKQANNF" target="_blank"> 
-          <span>BUY ON AMAZON</span>
-        </a>
+<div class="wrap">
 
-        <div class="features">
-          <div class="chip">✅ BPA-frei</div>
-          <div class="chip">💧 Auslaufsicher</div>
-          <div class="chip">🧽 Leicht zu reinigen</div>
-          <div class="chip">🌱 Wiederverwendbar &amp; nachhaltig</div>
-        </div>
-      </div>
-
-<div class="mock" style="display:grid; gap:10px;">
-  <img src="images/kitchen.jpg" alt="Bottle kitchen" style="width:100%; border-radius:12px;">
-  <img src="images/outdoor.jpg" alt="Bottle outdoor" style="width:100%; border-radius:12px;">
-  <img src="images/Munasgym.jpg" alt="Bottle gym" style="width:100%; border-radius:12px;">
-</div>
-      </div>
-    </section>
-
-    <section class="about">
-      <h2>Über Munas Store</h2>
-      <p>
-        <strong>Munas Store</strong> ist eine wachsende E-Commerce-Marke mit dem Ziel,
-        hochwertige und langlebige Produkte für Alltag, Haushalt und Sport anzubieten.
-      </p>
-      <p>
-        Wir starten mit einer robusten Edelstahl-Trinkflasche – weitere praktische Artikel
-        sind bereits in Planung. Wir setzen auf langlebige Materialien, funktionales Design
-        und eine schnelle, zuverlässige Lieferung über Amazon FBA.
-      </p>
-    </section>
-
-    <section class="legal">
-      <p>Fragen? <a href="mailto:info@munas-store.com">info@munas-store.com</a></p>
-      <p>Verkauf ausschließlich über Amazon Marketplace (FBA). Kein Direktverkauf auf dieser Website.</p>
-    </section>
-
-    <p class="lang-switch">
-      <strong>DE</strong> | <a href="/en/">EN</a>
+  <section class="hero">
+    <h1>Robuste, BPA-freie Trinkflasche</h1>
+    <p>
+      Auslaufsicher, langlebig und perfekt für Alltag, Sport und Reisen.
+      Versand über Amazon FBA.
     </p>
-  </main>
 
-  <footer>
-    <div class="footer-inner">
-      <a href="/impressum.html">Impressum</a> ·
-      <a href="/datenschutz.html">Datenschutz</a> ·
-      <a href="/agb.html">AGB</a> ·
-      <a href="/widerruf.html">Widerruf</a> ·
-      <a href="/versand.html">Versand &amp; Rückgabe</a>
-      <div class="copy">© <span id="y"></span> Munas E-Commerce</div>
+    <a class="btn" href="https://www.amazon.de/dp/B0FXS98DTS" target="_blank">
+      🛒 BUY ON AMAZON
+    </a>
+
+    <div class="features">
+      <div class="chip">✅ BPA-frei</div>
+      <div class="chip">💧 Auslaufsicher</div>
+      <div class="chip">🧽 Leicht zu reinigen</div>
+      <div class="chip">🌱 Nachhaltig</div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <!-- IMAGES -->
+    <div class="images">
+      <img src="/images/kitchen.jpg" alt="Bottle kitchen">
+      <img src="/images/outdoor.jpg" alt="Bottle outdoor">
+      <img src="/images/munasgym.jpg" alt="Bottle gym">
+    </div>
+
+  </section>
+
+  <section class="about">
+    <h2>Über Munas Store</h2>
+    <p>
+      Munas Store ist eine wachsende E-Commerce Marke für Produkte in Haushalt,
+      Sport und Alltag. Wir legen Wert auf Qualität, Design und langlebige Materialien.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <a href="/impressum.html">Impressum</a> ·
+  <a href="/datenschutz.html">Datenschutz</a> ·
+  <a href="/agb.html">AGB</a> ·
+  <a href="/widerruf.html">Widerruf</a>
+
+  <div>© 2025 Munas E-Commerce</div>
+</footer>
+
 </body>
 </html>
