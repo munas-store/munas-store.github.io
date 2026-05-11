@@ -14,12 +14,14 @@
       --accent2:#6ee7b7;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing:border-box;
+    }
 
     body {
       margin:0;
       font-family:system-ui, Arial;
-      background: radial-gradient(circle at top, #111827, #020617 60%, #000);
+      background:radial-gradient(circle at top, #111827, #020617 60%, #000);
       color:var(--text);
     }
 
@@ -37,7 +39,7 @@
 
     .brand {
       font-weight:700;
-      font-size:18px;
+      font-size:20px;
     }
 
     nav {
@@ -51,68 +53,76 @@
       font-size:14px;
     }
 
-    nav a:hover { color:white; }
+    nav a:hover {
+      color:white;
+    }
 
     .hero {
       margin-top:30px;
     }
 
     h1 {
-      font-size:32px;
+      font-size:36px;
       margin-bottom:10px;
     }
 
     p {
       color:var(--muted);
+      line-height:1.6;
     }
 
     .btn {
       display:inline-block;
       margin-top:15px;
-      padding:14px 20px;
-      border-radius:30px;
+      padding:14px 24px;
+      border-radius:999px;
       background:linear-gradient(90deg,var(--accent),var(--accent2));
       color:black;
-      font-weight:600;
+      font-weight:700;
       text-decoration:none;
     }
 
     .features {
-      margin-top:20px;
+      margin-top:25px;
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:10px;
+      gap:12px;
     }
 
     .chip {
       background:#111827;
-      padding:10px;
-      border-radius:10px;
+      padding:12px;
+      border-radius:12px;
       text-align:center;
     }
 
     .images {
-      margin-top:25px;
+      margin-top:30px;
       display:grid;
-      gap:10px;
+      gap:14px;
     }
 
     .images img {
       width:100%;
-      border-radius:12px;
+      border-radius:16px;
+      display:block;
     }
 
     .about {
-      margin-top:40px;
+      margin-top:45px;
+    }
+
+    .about h2 {
+      margin-bottom:10px;
     }
 
     footer {
-      margin-top:40px;
+      margin-top:50px;
       text-align:center;
       font-size:13px;
       color:var(--muted);
       border-top:1px solid #1f2937;
-      padding-top:15px;
+      padding:20px 0;
     }
 
     footer a {
@@ -121,7 +131,24 @@
       margin:0 8px;
     }
 
-    footer a:hover { color:white; }
+    footer a:hover {
+      color:white;
+    }
+
+    .lang {
+      text-align:center;
+      margin-top:25px;
+    }
+
+    @media(max-width:700px) {
+      .features {
+        grid-template-columns:1fr;
+      }
+
+      h1 {
+        font-size:30px;
+      }
+    }
 
   </style>
 </head>
@@ -130,6 +157,7 @@
 
 <header>
   <div class="brand">Munas Store</div>
+
   <nav>
     <a href="/agb.html">AGB</a>
     <a href="/widerruf.html">Widerruf</a>
@@ -142,14 +170,18 @@
 <div class="wrap">
 
   <section class="hero">
+
     <h1>Robuste, BPA-freie Trinkflasche</h1>
+
     <p>
       Auslaufsicher, langlebig und perfekt für Alltag, Sport und Reisen.
       Versand über Amazon FBA.
     </p>
 
-    <a class="btn" href="https://www.amazon.de/dp/B0FXS98DTS" target="_blank">
-      🛒 BUY ON AMAZON
+    <a class="btn"
+       href="https://www.amazon.de/dp/B0FXS98DTS"
+       target="_blank">
+       🛒 BUY ON AMAZON
     </a>
 
     <div class="features">
@@ -161,32 +193,53 @@
 
     <!-- IMAGES -->
     <div class="images">
-      <img src="/images/kitchen.jpg" 
-      <img src="/images/outdoor.jpg" 
+      <img src="/images/kitchen.jpg"
+           alt="Munas Trinkflasche Küche">
+
+      <img src="/images/outdoor.jpg"
+           alt="Munas Trinkflasche Outdoor">
+
       <img src="/images/munasgym.jpg"
+           alt="Munas Trinkflasche Fitnessstudio">
     </div>
 
   </section>
 
   <section class="about">
+
     <h2>Über Munas Store</h2>
+
     <p>
-      Munas Store ist eine wachsende E-Commerce Marke für Produkte in Haushalt,
-      Sport und Alltag. Wir legen Wert auf Qualität, Design und langlebige Materialien.
+      Munas Store ist eine wachsende E-Commerce Marke für Produkte
+      in Haushalt, Sport und Alltag.
     </p>
+
+    <p>
+      Wir setzen auf langlebige Materialien, modernes Design
+      und hochwertige Qualität.
+    </p>
+
   </section>
-<p style="text-align:center; margin-top:20px;">
-  <strong>DE</strong> | <a href="/en.html">EN</a>
-</p>
+
+  <!-- LANGUAGE SWITCH -->
+  <div class="lang">
+    <strong>DE</strong> |
+    <a href="/en/">EN</a>
+  </div>
+
 </div>
 
 <footer>
+
   <a href="/impressum.html">Impressum</a> ·
   <a href="/datenschutz.html">Datenschutz</a> ·
   <a href="/agb.html">AGB</a> ·
   <a href="/widerruf.html">Widerruf</a>
 
-  <div>© 2025 Munas E-Commerce</div>
+  <div style="margin-top:10px;">
+    © 2025 Munas E-Commerce
+  </div>
+
 </footer>
 
 </body>
