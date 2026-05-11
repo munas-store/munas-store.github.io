@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,19 +26,20 @@
 body{
   margin:0;
   font-family:Arial,sans-serif;
-  background:radial-gradient(circle at top,#111827,#020617 60%,#000);
+  background:
+  radial-gradient(circle at top,#111827,#020617 60%,#000);
   color:var(--text);
 }
 
 header{
-  border-bottom:1px solid #1f2937;
   padding:18px;
+  border-bottom:1px solid #1f2937;
   text-align:center;
   background:#020617;
 }
 
 .brand{
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
 }
 
@@ -60,7 +63,7 @@ nav a:hover{
 }
 
 .wrap{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:20px;
 }
@@ -74,15 +77,15 @@ nav a:hover{
   padding:8px 14px;
   border-radius:999px;
   background:#111827;
-  color:#d1d5db;
   border:1px solid #1f2937;
+  color:#d1d5db;
   font-size:13px;
 }
 
 h1{
-  font-size:42px;
-  margin-top:18px;
+  font-size:52px;
   line-height:1.1;
+  margin-top:18px;
 }
 
 p{
@@ -95,7 +98,8 @@ p{
   margin-top:20px;
   padding:16px 28px;
   border-radius:999px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  background:
+  linear-gradient(90deg,var(--accent),var(--accent2));
   color:black;
   font-weight:700;
   text-decoration:none;
@@ -110,23 +114,18 @@ p{
 
 .chip{
   background:#0b1120;
+  border:1px solid #1f2937;
   padding:16px;
   border-radius:18px;
   text-align:center;
-  border:1px solid #111827;
 }
 
 .images{
-  margin-top:35px;
+  margin-top:40px;
   display:grid;
-  gap:18px;
-}
-
-.images{
-  margin-top:35px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
 }
 
 .images img{
@@ -136,41 +135,35 @@ p{
   border-radius:24px;
   display:block;
 }
-}
 
 .badges,
 .reviews,
 .products,
-.social{
-  margin-top:45px;
+.social,
+.about{
+  margin-top:50px;
 }
 
 .badge-grid,
 .product-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:15px;
+  gap:16px;
 }
 
 .badge,
-.product-card{
+.product-card,
+.reviews{
   background:#0b1120;
   border:1px solid #1f2937;
-  padding:20px;
-  border-radius:20px;
+  padding:22px;
+  border-radius:24px;
 }
 
 .product-card a{
   color:#6ee7b7;
   text-decoration:none;
   font-weight:700;
-}
-
-.reviews{
-  background:#0b1120;
-  padding:25px;
-  border-radius:24px;
-  border:1px solid #1f2937;
 }
 
 .social a{
@@ -183,14 +176,10 @@ p{
   text-decoration:none;
 }
 
-.about{
-  margin-top:45px;
-}
-
 footer{
-  margin-top:50px;
-  border-top:1px solid #1f2937;
+  margin-top:60px;
   padding:25px;
+  border-top:1px solid #1f2937;
   text-align:center;
   color:var(--muted);
 }
@@ -208,7 +197,7 @@ footer a:hover{
 @media(max-width:760px){
 
   h1{
-    font-size:32px;
+    font-size:34px;
   }
 
   .features,
@@ -217,9 +206,18 @@ footer a:hover{
     grid-template-columns:1fr;
   }
 
+  .images{
+    grid-template-columns:1fr;
+  }
+
+  .images img{
+    height:auto;
+  }
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -249,7 +247,7 @@ footer a:hover{
 </span>
 
 <h1>
-  Robuste, BPA-freie Trinkflasche
+  Robuste, BPA-freie Edelstahl Trinkflasche
 </h1>
 
 <p>
@@ -260,7 +258,7 @@ footer a:hover{
 <a class="btn"
 href="https://www.amazon.de/dp/B0FXS98DTS"
 target="_blank">
-🛒 BUY ON AMAZON
+🛒 AUF AMAZON KAUFEN
 </a>
 
 <div class="features">
@@ -286,18 +284,18 @@ target="_blank">
 <div class="images">
 
 <img src="/Image/library1.png"
-alt="Munas Cover">
+alt="Munas Trinkflasche Cover">
 
 <img src="/Image/kitchen.jpg"
-alt="Munas Kitchen">
+alt="Munas Trinkflasche Küche">
 
 <img src="/Image/outdoor.jpg"
-alt="Munas Outdoor">
+alt="Munas Trinkflasche Outdoor">
 
 <img src="/Image/munasgym.jpg"
-alt="Munas Gym">
+alt="Munas Trinkflasche Fitnessstudio">
 
-</div> 
+</div>
 
 </section>
 
@@ -318,7 +316,7 @@ alt="Munas Gym">
 </div>
 
 <div class="badge">
-⭐ Moderne Edelstahlflasche
+⭐ Moderne Edelstahl Trinkflasche
 </div>
 
 </div>
@@ -327,29 +325,35 @@ alt="Munas Gym">
 
 <section class="reviews">
 
-<h2>⭐ Amazon Bewertungen</h2>
+<h2>
+⭐ Amazon Bewertungen
+</h2>
 
 <p>
-Bewertungen finden Sie direkt auf Amazon.
+Kundenbewertungen finden Sie direkt auf Amazon.
 </p>
 
 <a class="btn"
 href="https://www.amazon.de/dp/B0FXS98DTS"
 target="_blank">
-Bewertungen ansehen
+Bewertungen auf Amazon ansehen
 </a>
 
 </section>
 
 <section class="products">
 
-<h2>Weitere Produkte folgen</h2>
+<h2>
+Weitere Produkte folgen bald
+</h2>
 
 <div class="product-grid">
 
 <div class="product-card">
 
-<h3>Edelstahl Trinkflasche</h3>
+<h3>
+Edelstahl Trinkflasche
+</h3>
 
 <p>
 Jetzt auf Amazon verfügbar.
@@ -364,10 +368,12 @@ Auf Amazon ansehen
 
 <div class="product-card">
 
-<h3>Weitere Produkte</h3>
+<h3>
+Lifestyle-Produkte
+</h3>
 
 <p>
-Neue Produkte für Alltag,
+Weitere hochwertige Produkte für Alltag,
 Haushalt und Sport folgen bald.
 </p>
 
@@ -379,7 +385,9 @@ Haushalt und Sport folgen bald.
 
 <section class="social">
 
-<h2>Folge Munas Store</h2>
+<h2>
+Folge Munas Store
+</h2>
 
 <a href="https://www.instagram.com/munas.ecommerce?igsh=MWgybTVpdHp3cXF0NA%3D%3D&utm_source=qr"
 target="_blank">
@@ -400,34 +408,63 @@ target="_blank">
 
 <section class="about">
 
-<h2>Über Munas Store</h2>
+<h2>
+Über Munas Store
+</h2>
 
 <p>
-Munas Store ist eine wachsende
-E-Commerce Marke für Produkte
-in Haushalt, Sport und Alltag.
+Munas Store ist eine wachsende E-Commerce Marke
+für langlebige und moderne Produkte im Bereich
+Alltag, Haushalt und Sport.
 </p>
 
 <p>
-Wir setzen auf langlebige Materialien,
-modernes Design und hochwertige Qualität.
+Wir setzen auf hochwertige Materialien,
+modernes Design und zuverlässige Lieferung
+über Amazon FBA.
 </p>
 
 </section>
 
 <p style="text-align:center;margin-top:35px;">
-<strong>DE</strong> |
-<a href="/en/">EN</a>
+
+<strong>
+DE
+</strong>
+
+|
+
+<a href="/en/">
+EN
+</a>
+
 </p>
 
 </div>
 
 <footer>
 
-<a href="/impressum.html">Impressum</a> ·
-<a href="/datenschutz.html">Datenschutz</a> ·
-<a href="/agb.html">AGB</a> ·
-<a href="/widerruf.html">Widerruf</a>
+<a href="/impressum.html">
+Impressum
+</a>
+
+·
+
+<a href="/datenschutz.html">
+Datenschutz
+</a>
+
+·
+
+<a href="/agb.html">
+AGB
+</a>
+
+·
+
+<a href="/widerruf.html">
+Widerruf
+</a>
 
 <div style="margin-top:10px;">
 © 2025 Munas E-Commerce
