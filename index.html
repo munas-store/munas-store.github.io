@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Munas Store – Edelstahl Trinkflasche</title>
 
   <style>
-    :root {
+    :root{
       --bg:#050711;
       --text:#e9eef6;
       --muted:#9ca3af;
@@ -14,209 +15,331 @@
       --accent2:#6ee7b7;
     }
 
-    * {
+    *{
       box-sizing:border-box;
     }
 
-    body {
+    body{
       margin:0;
-      font-family:system-ui, Arial;
-      background:radial-gradient(circle at top, #111827, #020617 60%, #000);
+      font-family:system-ui, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #111827, #020617 60%, #000);
       color:var(--text);
     }
 
-    .wrap {
-      max-width:980px;
+    .wrap{
+      max-width:1000px;
       margin:auto;
       padding:20px;
     }
 
-    header {
+    header{
       border-bottom:1px solid #1f2937;
+      padding:18px 0;
       text-align:center;
-      padding:15px 0;
     }
 
-    .brand {
+    .brand{
+      font-size:22px;
       font-weight:700;
-      font-size:20px;
     }
 
-    nav {
-      margin-top:10px;
+    .brand span{
+      font-weight:400;
+      opacity:.8;
     }
 
-    nav a {
-      margin:0 10px;
+    nav{
+      margin-top:12px;
+    }
+
+    nav a{
       color:var(--muted);
       text-decoration:none;
+      margin:0 10px;
       font-size:14px;
     }
 
-    nav a:hover {
+    nav a:hover{
       color:white;
     }
 
-    .hero {
-      margin-top:30px;
+    .hero{
+      margin-top:35px;
     }
 
-    h1 {
-      font-size:36px;
-      margin-bottom:10px;
-    }
-
-    p {
-      color:var(--muted);
-      line-height:1.6;
-    }
-
-    .btn {
+    .tag{
       display:inline-block;
-      margin-top:15px;
-      padding:14px 24px;
+      padding:8px 14px;
       border-radius:999px;
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      color:black;
-      font-weight:700;
-      text-decoration:none;
+      background:#111827;
+      border:1px solid #1f2937;
+      color:#dbeafe;
+      font-size:13px;
+      margin-bottom:16px;
     }
 
-    .features {
-      margin-top:25px;
+    h1{
+      font-size:42px;
+      line-height:1.1;
+      margin:0 0 14px;
+    }
+
+    .lead{
+      color:var(--muted);
+      font-size:19px;
+      line-height:1.7;
+      max-width:720px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:24px;
+      padding:16px 26px;
+      border-radius:999px;
+      background:
+        linear-gradient(90deg,var(--accent),var(--accent2));
+      color:black;
+      text-decoration:none;
+      font-weight:700;
+      font-size:16px;
+    }
+
+    .features{
+      margin-top:30px;
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(2,1fr);
       gap:12px;
     }
 
-    .chip {
-      background:#111827;
-      padding:12px;
-      border-radius:12px;
+    .chip{
+      background:#0f172a;
+      padding:14px;
+      border-radius:14px;
       text-align:center;
+      border:1px solid #1e293b;
+      font-size:15px;
     }
 
-    .images {
-      margin-top:30px;
+    .cover{
+      margin-top:35px;
+    }
+
+    .cover img{
+      width:100%;
+      border-radius:22px;
+      display:block;
+      object-fit:cover;
+      box-shadow:
+        0 20px 50px rgba(0,0,0,.45);
+    }
+
+    .gallery{
+      margin-top:18px;
       display:grid;
+      grid-template-columns:repeat(2,1fr);
       gap:14px;
     }
 
-    .images img {
+    .gallery img{
       width:100%;
-      border-radius:16px;
+      border-radius:18px;
       display:block;
     }
 
-    .about {
-      margin-top:45px;
-    }
-
-    .about h2 {
-      margin-bottom:10px;
-    }
-
-    footer {
+    .about{
       margin-top:50px;
-      text-align:center;
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px solid #1f2937;
-      padding:20px 0;
+      background:#0b1120;
+      border:1px solid #1f2937;
+      border-radius:22px;
+      padding:28px;
     }
 
-    footer a {
+    .about h2{
+      margin-top:0;
+      font-size:28px;
+    }
+
+    .about p{
+      color:var(--muted);
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .lang{
+      text-align:center;
+      margin-top:35px;
+      font-size:15px;
+    }
+
+    .lang a{
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    footer{
+      margin-top:45px;
+      border-top:1px solid #1f2937;
+      padding:20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    footer a{
       color:var(--muted);
       text-decoration:none;
       margin:0 8px;
     }
 
-    footer a:hover {
+    footer a:hover{
       color:white;
     }
 
-    .lang {
-      text-align:center;
-      margin-top:25px;
-    }
+    @media(max-width:760px){
 
-    @media(max-width:700px) {
-      .features {
+      h1{
+        font-size:34px;
+      }
+
+      .features{
         grid-template-columns:1fr;
       }
 
-      h1 {
-        font-size:30px;
+      .gallery{
+        grid-template-columns:1fr;
       }
-    }
 
+      .lead{
+        font-size:17px;
+      }
+
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">Munas Store</div>
+
+  <div class="brand">
+    Munas <span>Store</span>
+  </div>
 
   <nav>
     <a href="/agb.html">AGB</a>
     <a href="/widerruf.html">Widerruf</a>
-    <a href="/versand.html">Versand</a>
+    <a href="/versand.html">Versand & Rückgabe</a>
     <a href="/impressum.html">Impressum</a>
     <a href="/datenschutz.html">Datenschutz</a>
   </nav>
+
 </header>
 
 <div class="wrap">
 
   <section class="hero">
 
-    <h1>Robuste, BPA-freie Trinkflasche</h1>
+    <div class="tag">
+      Neu • Edelstahl Trinkflasche
+    </div>
 
-    <p>
-      Auslaufsicher, langlebig und perfekt für Alltag, Sport und Reisen.
-      Versand über Amazon FBA.
+    <h1>
+      Robuste, BPA-freie Edelstahl Trinkflasche
+    </h1>
+
+    <p class="lead">
+      Auslaufsicher, langlebig und perfekt für Alltag,
+      Sport, Arbeit und Reisen. Premium Qualität
+      mit schnellem Amazon FBA Versand.
     </p>
 
     <a class="btn"
        href="https://www.amazon.de/dp/B0FXS98DTS"
        target="_blank">
-       🛒 BUY ON AMAZON
+       🛒 AUF AMAZON KAUFEN
     </a>
 
     <div class="features">
-      <div class="chip">✅ BPA-frei</div>
-      <div class="chip">💧 Auslaufsicher</div>
-      <div class="chip">🧽 Leicht zu reinigen</div>
-      <div class="chip">🌱 Nachhaltig</div>
+
+      <div class="chip">
+        ✅ BPA-frei
+      </div>
+
+      <div class="chip">
+        💧 Auslaufsicher
+      </div>
+
+      <div class="chip">
+        🧽 Leicht zu reinigen
+      </div>
+
+      <div class="chip">
+        🌱 Nachhaltig & wiederverwendbar
+      </div>
+
     </div>
 
-    <!-- IMAGES -->
-<div class="images">
-  <img src="/Image/kitchen.jpg" alt="Munas Trinkflasche Küche">
-  <img src="/Image/outdoor.jpg" alt="Munas Trinkflasche Outdoor">
-  <img src="/Image/munasgym.jpg" alt="Munas Trinkflasche Fitnessstudio">
-</div>
+    <!-- COVER IMAGE -->
+
+    <div class="cover">
+
+      <img
+        src="/Image/library1.png"
+        alt="Munas Lifestyle Trinkflasche"
+      >
+
+    </div>
+
+    <!-- GALLERY -->
+
+    <div class="gallery">
+
+      <img
+        src="/Image/kitchen.jpg"
+        alt="Trinkflasche Küche"
+      >
+
+      <img
+        src="/Image/outdoor.jpg"
+        alt="Trinkflasche Outdoor"
+      >
+
+      <img
+        src="/Image/munasgym.jpg"
+        alt="Trinkflasche Fitnessstudio"
+      >
+
+    </div>
 
   </section>
 
   <section class="about">
 
-    <h2>Über Munas Store</h2>
+    <h2>
+      Über Munas Store
+    </h2>
 
     <p>
-      Munas Store ist eine wachsende E-Commerce Marke für Produkte
-      in Haushalt, Sport und Alltag.
+      Munas Store ist eine wachsende E-Commerce Marke
+      für hochwertige Produkte im Alltag,
+      Haushalt und Sport.
     </p>
 
     <p>
-      Wir setzen auf langlebige Materialien, modernes Design
-      und hochwertige Qualität.
+      Wir verbinden modernes Design,
+      langlebige Materialien und praktische Funktionalität
+      für Produkte, die täglich Freude machen.
+    </p>
+
+    <p>
+      Unsere Edelstahl Trinkflaschen sind erst der Anfang —
+      weitere Lifestyle- und Haushaltsprodukte
+      sind bereits in Entwicklung.
     </p>
 
   </section>
 
-  <!-- LANGUAGE SWITCH -->
   <div class="lang">
     <strong>DE</strong> |
     <a href="/en/">EN</a>
